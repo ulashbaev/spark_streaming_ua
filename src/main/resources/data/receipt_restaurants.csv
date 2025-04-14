@@ -1,0 +1,11 @@
+id,date_time,franchise_id,franchise_name,restaurant_franchise_id,country,city,lat,lng,receipt_id,total_cost,discount,items_count
+4,2022-05-16 11:20:33,FR-100,Best Food,RES-100,USA,New York,40.7128,-74.0060,REC-004,42.5,0.05,2
+5,2022-05-17 18:15:07,FR-100,Best Food,RES-100,USA,New York,40.7128,-74.0060,REC-005,68.0,0.1,4
+6,2022-06-21 12:45:19,FR-200,Quick Bites,RES-200,UK,London,51.5074,-0.1278,REC-006,24.5,0.0,1
+7,2022-06-22 14:30:45,FR-200,Quick Bites,RES-200,UK,London,51.5074,-0.1278,REC-007,55.0,0.2,6
+8,2022-07-10 13:10:22,FR-300,Gourmet Delight,RES-300,France,Paris,48.8566,2.3522,REC-008,90.0,0.15,5
+9,2022-07-11 19:45:30,FR-300,Gourmet Delight,RES-300,France,Paris,48.8566,2.3522,REC-009,37.5,0.1,3
+10,2022-08-05 12:00:15,FR-400,Tokyo Sushi,RES-400,Japan,Tokyo,35.6762,139.6503,REC-010,120.0,0.0,8
+11,2022-08-06 20:20:40,FR-400,Tokyo Sushi,RES-400,Japan,Tokyo,35.6762,139.6503,REC-011,65.5,0.1,4
+12,2022-09-15 11:30:00,FR-500,Roma Pasta,RES-500,Italy,Rome,41.9028,12.4964,REC-012,48.0,0.05,3
+13,2022-09-16 14:15:55,FR-500,Roma Pasta,RES-500,Italy,Rome,41.9028,12.4964,REC-013,72.0,0.2,5
