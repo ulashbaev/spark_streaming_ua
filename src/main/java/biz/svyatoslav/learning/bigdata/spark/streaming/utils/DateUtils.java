@@ -7,36 +7,50 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DateUtils {
-    // More robust UDF that handles both String and Timestamp inputs
-    public static UDF1<Object, String> safeDateConverter(String outputFormat) {
+    /**
+     * Creates a UDF that handles both String and Timestamp inputs
+     * @param inputFormat Expected input format (for String inputs)
+     * @param outputFormat Desired output format
+     * @return UDF that converts date/timestamp to formatted string
+     */
+    public static UDF1<Object, String> createDateConverter(String inputFormat, String outputFormat) {
         return input -> {
-            if (input == null) return null;
-            
+            if (input == null) {
+                return null;
+            }
+
             try {
                 Date date;
                 if (input instanceof Timestamp) {
                     date = new Date(((Timestamp) input).getTime());
                 } else if (input instanceof String) {
-                    // Try multiple common date formats
-                    String[] possibleFormats = {
-                        "yyyy-MM-dd HH:mm:ss",
-                        "yyyyMMdd",
-                        "MM/dd/yyyy HH:mm"
-                    };
-                    
-                    for (String format : possibleFormats) {
-                        try {
-                            date = new SimpleDateFormat(format).parse((String) input);
-                            break;
-                        } catch (Exception e) {
-                            continue;
-                        }
-                    }
-                    if (date == null) return null;
+                    SimpleDateFormat sdf = new SimpleDateFormat(inputFormat);
+                    date = sdf.parse((String) input);
                 } else {
-                    return null;
+                    return null; // Unsupported type
                 }
-                return new SimpleDateFormat(outputFormat).format(date);
+
+                SimpleDateFormat outFormat = new SimpleDateFormat(outputFormat);
+                return outFormat.format(date);
+            } catch (Exception e) {
+                return null;
+            }
+        };
+    }
+
+    /**
+     * UDF specifically for converting Timestamp to formatted string
+     * @param outputFormat Desired output format
+     * @return UDF that converts Timestamp to string
+     */
+    public static UDF1<Timestamp, String> timestampToString(String outputFormat) {
+        return timestamp -> {
+            if (timestamp == null) {
+                return null;
+            }
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat(outputFormat);
+                return sdf.format(new Date(timestamp.getTime()));
             } catch (Exception e) {
                 return null;
             }
