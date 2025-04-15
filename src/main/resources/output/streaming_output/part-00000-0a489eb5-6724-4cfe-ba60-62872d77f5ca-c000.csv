@@ -1,0 +1,2 @@
+id,franchise_id,franchise_name,restaurant_franchise_id,country,city,lat,lng,date,avg_tmpr_c,erroneous_orders,tiny_orders,small_orders,medium_orders,large_orders,most_popular_order_type,receipt_id,total_cost,discount,real_total_cost,items_count,order_size,promo_cold_drinks
+6,2022-06-21T12:45:19.000+05:00,FR-200,Quick Bites,RES-200,UK,,51.51,,,,,1,,20220621,17.8,24.5,,0.0,1.0,0,0,false

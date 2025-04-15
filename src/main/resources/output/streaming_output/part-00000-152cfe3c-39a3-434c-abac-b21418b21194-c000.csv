@@ -1,0 +1,2 @@
+id,franchise_id,franchise_name,restaurant_franchise_id,country,city,lat,lng,date,avg_tmpr_c,erroneous_orders,tiny_orders,small_orders,medium_orders,large_orders,most_popular_order_type,receipt_id,total_cost,discount,real_total_cost,items_count,order_size,promo_cold_drinks
+11,2022-08-06T20:20:40.000+05:00,FR-400,Tokyo Sushi,RES-400,Japan,,35.68,,,,,4,,20220806,30.5,58.95,,0.0,0.0,0,1,false

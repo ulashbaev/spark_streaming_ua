@@ -1,0 +1,3 @@
+id,franchise_id,franchise_name,restaurant_franchise_id,country,city,lat,lng,date,avg_tmpr_c,erroneous_orders,tiny_orders,small_orders,medium_orders,large_orders,most_popular_order_type,receipt_id,total_cost,discount,real_total_cost,items_count,order_size,promo_cold_drinks
+12,2022-09-15T11:30:00.000+05:00,FR-500,Roma Pasta,RES-500,Italy,,41.9,,,,,3,,20220915,24.7,45.6,,0.0,0.0,1,0,false
+5,2022-05-17T18:15:07.000+05:00,FR-100,Best Food,RES-100,USA,,40.71,,,,,4,,20220517,23.7,61.2,,0.0,0.0,0,1,false
